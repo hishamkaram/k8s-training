@@ -4,6 +4,12 @@ metadata:
   name: hello-minikube-service
 spec:
   selector:
+    # This key-value pair should match the template > metadata > labels specified earlier in POD/Deployment,
+    # so that Service knows which set of pods to route the request to.
     app: hello-minikube
   ports:
-    - port: 8080
+    # Note: A Service can map any incoming port to a targetPort.
+    # By default and for convenience, the targetPort is set to the same value as the port field.
+    - protocol: TCP
+      port: 8080
+      targetPort: 8080
