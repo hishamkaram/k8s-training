@@ -3,20 +3,20 @@ kind: Deployment
 metadata:
   name: hello-minikube-deployment
   labels:
-    app: hello-minikube
+    app: hello-minikube # deployment label
 spec:
-  replicas: 1
+  replicas: 1 # used to determine the number of pod replicas
   selector:
     matchLabels:
-      app: hello-minikube
+      app: hello-minikube-pods # should match pod labels below
   template:
     metadata:
       labels:
-        app: hello-minikube
+        app: hello-minikube-pods
     spec:
       containers:
         - name: hello-minikube-container
-          image: ealen/echo-server
+          image: ealen/echo-server # the image that will be used by each pod
           ports:
             - containerPort: 8080
           envFrom:
