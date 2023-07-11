@@ -1,0 +1,7 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: env-configmap
+data:
+  VARIABLE_1: "3"
+  VARIABLE_2: "value of variable_2"

@@ -1,0 +1,9 @@
+kind: Service
+apiVersion: v1
+metadata:
+  name: hello-minikube-service
+spec:
+  selector:
+    app: hello-minikube
+  ports:
+    - port: 8080
