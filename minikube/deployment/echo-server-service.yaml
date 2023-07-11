@@ -11,5 +11,5 @@ spec:
     # Note: A Service can map any incoming port to a targetPort.
     # By default and for convenience, the targetPort is set to the same value as the port field.
     - protocol: TCP
-      port: 8080
-      targetPort: 8080
+      port: 80
+      targetPort: 80
